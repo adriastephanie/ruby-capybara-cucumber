@@ -7,11 +7,24 @@ end
 
 Quando('eu adiciono uma conta') do
     find('.dropdown-toggle').click()
+    sleep(2)
+    click_link 'Adicionar'
+    find('#nome').send_keys('Adicionar conta 123')
+    find('.btn').click()
     click_link 'Adicionar'
 end
 
 Então('minha conta é salva na lista de contas') do
-    find('#nome').send_keys('Teste de Conta')
+    expect(page).to have_content 'Adicionar conta 123'
+end
+
+Quando('eu adiciono uma conta já existente') do
+    find('.dropdown-toggle').click()
+    click_link 'Adicionar'
+    find('#nome').send_keys('Conta mesmo nome')
     find('.btn').click()
-    expect(page).to have_content 'Teste de Conta'
+end
+
+Então('não deve ser salva') do
+    expect(page).to have_content 'Já existe uma conta com esse nome!'
 end
