@@ -3,19 +3,32 @@
 @funcional
 Funcionalidade: Fazer login.
 
-@cadastroSucesso
-Cenario: Deve criar uma conta.
-    Dado que eu estou no site para cadastrar
+@loginSucesso
+Cenario: Logar com sucesso.
+    Dado que eu estou no site para logar
     Quando informar o e-mail válido
     E informar o senha válido
-    Então o cliente é cadastrado no sistema
+    Então o cliente é redirecionado ao sistema
 
-# @criarContaJaCadastrada
+@loginSemSucesso
+Cenario: Logar sem sucesso.
+    Dado que eu estou no site para logar
+    Quando informar o e-mail inválido
+    E informar o senha inválido
+    Então o cliente não deve entrar no sistema
+
+# Cenario: Cadastro com sucesso.
+#     Dado que eu estou no site para cadastrar
+#     Quando informar o e-mail válido
+#     E informar o senha válido
+#     Então o cliente é cadastrado com sucesso
+
+# @contaJaCadastrada
 # Cenario: Deve criar uma conta já cadastrada.
 #     Dado que eu estou no site para cadastrar
 #     Quando informar o e-mail válido
 #     E informar o senha válido
-#     Então o cliente é cadastrado no sistema
+#     Então o sistema deve mostrar mensagem de conta existente
 
 # @loginSucesso
 # Cenario: Logar com sucesso.
