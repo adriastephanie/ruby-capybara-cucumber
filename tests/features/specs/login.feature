@@ -1,6 +1,6 @@
 # language: pt
 
-@funcional
+@featLogin
 Funcionalidade: Fazer login.
 
 @loginSucesso
