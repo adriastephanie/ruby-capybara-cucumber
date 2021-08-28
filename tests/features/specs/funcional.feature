@@ -11,7 +11,11 @@ Cenario: Atualizar uma conta.
     Quando eu adiciono uma conta
     Então minha conta é salva na lista de contas
 
-# Cenario: Atualizar uma conta.
+@updateContaExistente
+Cenario: Atualizar uma conta.
+    Quando eu adiciono uma conta já existente
+    Então não deve ser salva 
+    
 # Cenario: Não deve criar conta com o mesmo nome.
 # Cenario: Deve criar transação.
 # Cenario: Deve obter valor atualizado.
