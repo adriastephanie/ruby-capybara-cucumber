@@ -1,5 +1,27 @@
 # ruby-capybara-cucumber
-repositório de teste e2e utilizando linguagem ruby + capybara + cucumber
+## _Repositório de estudo de cucumber, capybara e ruby_
+
+
+- Interagir com os principais elementos.
+- Organizar os códigos tornando-os mais legíveis, reusáveis e fáceis de manter.
+- Aprender a gerar relatórios
+
+# Contexto 
+
+## Ruby: 
+linguagem dinâmica, open source com foco na simplicidade e na produtividade. Tem uma sintaxe elegante de leitura natural e fácil escrita.
+
+## Capybara: 
+ajuda você a testar aplicações web, simulando como um usuário real. Abstrai a conexão entre o navegador e o código, utilizando um “driver” para fazer isso.
+
+## RSpec: 
+é uma biblioteca que permite que se utilize asserções para validar os resultados das ações que realizamos. Nos ajuda a validar que o comportamento esperado foi obtido.
+
+## Cucumber:
+emprega o Behavior-Driven Development (é uma técnica de desenvolvimento ágil que visa integrar regras de negócios com linguagem de programação, focando o comportamento do software).
+
+## SitePrism:
+fornece um DSL (Domain Specific Language, uma linguagem de programação dedicada a um domínio de problema particular) simples, limpo e semântico para descrever seu site usando o padrão Page Objects (que serve como interface para simular a interação do usuário com os elementos de tela), em conjunto com Capybara para executar testes automatizados.
 
 
 error: 
@@ -20,40 +42,13 @@ Mapeando elementos
 
 Pclick_link 'Save'
 
-# Faz o clique no Botão com o texto "awesome".
-click_button 'awesome'
-click_link 'awesome'
+## Elementos
 
-# Faz o clique no Botão passando a Class
-click_button(class: 'nome_da_class')
-
-# Faz o clique no Botão com o id 
-
-
-# Faz o clique no Botão ou Link com texto "Save".
-click_link_or_button 'Save'
-
-# Preenche o texto com "Content" no campo "Name".
-fill_in 'Name', with: 'Content'
-
-# Seleciona o Checkbox
-check 'Content'
-# Remove a Seleção o Checkbox
-uncheck 'Content'
-
-# Selecionar o Radio button
-choose 'Content'
-
-# Seleciona a opção pela Texto "Label".
-select 'Option', from: 'Label'
-
-
-# Procura o elemento invisível pelo atributo id. 
-find_by_id("hidden_via_ancestor", visible: false)
 
 
 # Formatacao do cucumber no terminal 
  Para finalizar o setup crie um arquivo chamado “cucumber.yaml” na pasta raiz do projeto e ele deve conter a seguinte informações
+
 
  ---
 default: --profile progress
