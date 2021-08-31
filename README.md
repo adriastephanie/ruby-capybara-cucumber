@@ -43,6 +43,24 @@ Exemplo:
 $ xattr -d com.apple.quarantine chromedriver 
 ```
 
+
+# Execução 
+
+```sh
+cd tests/
+cucumber
+```
+
+> A linha vai executar todos os testes
+
+```sh
+cd tests/
+cucumber -t@nome_tag
+```
+
+> A linha vai executar somente o teste com a tag passada
+
+
 # Elementos
 {em construção}
 
