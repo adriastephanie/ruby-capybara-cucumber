@@ -21,8 +21,7 @@ Cenario: Deve criar transação com sucesso.
     Quando eu adiciono uma transação 
     Então minha transação é salva na lista de transições com sucesso
 
-
-
-# Cenario: Deve criar transação.
-# Cenario: Deve obter valor atualizado.
-# Cenario: Remover uma transação.
+@removeTransicaoSucesso    
+Cenario: Deve remover uma transação.
+    Quando eu tenho uma transição salva 
+    Então eu devo remove-la com sucesso

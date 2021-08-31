@@ -32,7 +32,7 @@ Quando('eu adiciono uma transação') do
     click_link 'Criar Movimentação'
     find('#data_transacao').send_keys('28/08/2021')
     find('#data_pagamento').send_keys('28/08/2021')
-    find('#descricao').send_keys('Movimentação Automatizada 4')
+    find('#descricao').send_keys('Movimentação 1')
     find('#interessado').send_keys('Maria Clara')
     find('#valor').send_keys('120')
     select'Conta alterada', from: 'conta' 
@@ -43,7 +43,17 @@ Quando('eu adiciono uma transação') do
   
   Então('minha transação é salva na lista de transições com sucesso') do
     expect(page).to have_content 'Movimentação adicionada com sucesso!'
+  end
+
+  Quando('eu tenho uma transição salva') do
     click_link 'Resumo Mensal'
-    expect(page).to have_content 'Movimentação Automatizada 4'
+    expect(page).to have_content 'Movimentação 1'
+
+    
+  end
+  
+  Então('eu devo remove-la com sucesso') do
+    find_by_xpath(`//span[contains(., '${conta}')]/../../..//i[@class='far fa-trash-alt']`).click()
+    
   end
   
