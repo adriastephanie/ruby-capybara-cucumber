@@ -24,31 +24,32 @@ emprega o Behavior-Driven Development (é uma técnica de desenvolvimento ágil 
 fornece um DSL (Domain Specific Language, uma linguagem de programação dedicada a um domínio de problema particular) simples, limpo e semântico para descrever seu site usando o padrão Page Objects (que serve como interface para simular a interação do usuário com os elementos de tela), em conjunto com Capybara para executar testes automatizados.
 
 
-error: 
+#### Erro no Mac ao abrir o driver
 
 solucao: 
 Terminal aberto
 Navegue até o caminho em que seu arquivo chromedriver está localizado
 Execute qualquer um dos comandos abaixo
+
+
+```sh
 Command1: xattr -d com.apple.quarantine <name-of-executable>
+```
 
-Exemplo
+Exemplo:
 
+```sh
 /usr/local/bin
 $ xattr -d com.apple.quarantine chromedriver 
-
-
-Mapeando elementos
-
-Pclick_link 'Save'
+```
 
 ## Elementos
+{em construção}
 
 
 
 # Formatacao do cucumber no terminal 
  Para finalizar o setup crie um arquivo chamado “cucumber.yaml” na pasta raiz do projeto e ele deve conter a seguinte informações
-
 
  ---
 default: --profile progress
@@ -56,5 +57,5 @@ pretty: --format pretty
 progress: --format progress
 
 
-A linha default altera o padrão default ao executarmos o comando “cucumber” no terminal, de tal maneira que toda vez que executamos “cucumber” na verdade estamos executando “cucumber” + todos os parâmetros inseridos na linha default. O formato --profile pretty sempre mostra uma tela agradavel passando a linguagem e os cenários. O formato --profile progress sempre forma mais reduzida, ideal para CI.
+> A linha default altera o padrão default ao executarmos o comando “cucumber” no terminal, de tal maneira que toda vez que executamos “cucumber” na verdade estamos executando “cucumber” + todos os parâmetros inseridos na linha default. O formato --profile pretty sempre mostra uma tela agradavel passando a linguagem e os cenários. O formato --profile progress sempre forma mais reduzida, ideal para CI.
 
