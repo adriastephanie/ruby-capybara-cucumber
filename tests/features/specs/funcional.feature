@@ -20,8 +20,3 @@ Cenario: Não deve criar conta com o mesmo nome.
 Cenario: Deve criar transação com sucesso.
     Quando eu adiciono uma transação 
     Então minha transação é salva na lista de transições com sucesso
-
-@removeTransicaoSucesso    
-Cenario: Deve remover uma transação.
-    Quando eu tenho uma transição salva 
-    Então eu devo remove-la com sucesso

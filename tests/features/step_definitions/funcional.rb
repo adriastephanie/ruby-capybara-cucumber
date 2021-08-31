@@ -9,12 +9,12 @@ Quando('eu adiciono uma conta') do
     find('.dropdown-toggle').click()
     sleep(2)
     click_link 'Adicionar'
-    find('#nome').send_keys('Adicionar conta 123')
+    find('#nome').send_keys('Adicionar conta 10')
     find('.btn').click()
 end
 
 Então('minha conta é salva na lista de contas') do
-    expect(page).to have_content 'Adicionar conta 123'
+    expect(page).to have_content 'Adicionar conta 10'
 end
 
 Quando('eu adiciono uma conta já existente') do
@@ -44,16 +44,3 @@ Quando('eu adiciono uma transação') do
   Então('minha transação é salva na lista de transições com sucesso') do
     expect(page).to have_content 'Movimentação adicionada com sucesso!'
   end
-
-  Quando('eu tenho uma transição salva') do
-    click_link 'Resumo Mensal'
-    expect(page).to have_content 'Movimentação 1'
-
-    
-  end
-  
-  Então('eu devo remove-la com sucesso') do
-    find_by_xpath(`//span[contains(., '${conta}')]/../../..//i[@class='far fa-trash-alt']`).click()
-    
-  end
-  

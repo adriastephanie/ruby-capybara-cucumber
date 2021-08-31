@@ -50,3 +50,16 @@ select 'Option', from: 'Label'
 
 # Procura o elemento invisível pelo atributo id. 
 find_by_id("hidden_via_ancestor", visible: false)
+
+
+# Formatacao do cucumber no terminal 
+ Para finalizar o setup crie um arquivo chamado “cucumber.yaml” na pasta raiz do projeto e ele deve conter a seguinte informações
+
+ ---
+default: --profile progress
+pretty: --format pretty
+progress: --format progress
+
+
+A linha default altera o padrão default ao executarmos o comando “cucumber” no terminal, de tal maneira que toda vez que executamos “cucumber” na verdade estamos executando “cucumber” + todos os parâmetros inseridos na linha default. O formato --profile pretty sempre mostra uma tela agradavel passando a linguagem e os cenários. O formato --profile progress sempre forma mais reduzida, ideal para CI.
+

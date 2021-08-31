@@ -1,5 +1,6 @@
 Quando('eu acesso a url') do
-    visit '/'
+    @home = Url.new
+    @home.load
     sleep(1)
 end
 

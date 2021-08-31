@@ -17,8 +17,3 @@ Cenario: Logar sem sucesso.
     E informar o senha inválido
     Então o cliente não deve entrar no sistema
 
-# Cenario: Atualizar uma conta.
-# Cenario: Não deve criar conta com o mesmo nome.
-# Cenario: Deve criar transação.
-# Cenario: Deve obter valor atualizado.
-# Cenario: Remover uma transação.
