@@ -7,7 +7,7 @@ Quando('preencher o nome válido') do
 end
 
 Quando('preencher o e-mail válido') do
-    find('#email').send_keys('mariaclara6@teste.com')
+    find('#email').send_keys('mariaclara7@teste.com')
 end
 
 Quando('preencher a senha válida') do

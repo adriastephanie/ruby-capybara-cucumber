@@ -1,5 +1,8 @@
 ---
 
-default: --profile progress
+default: --profile pretty -p hom
+
 pretty: --format pretty
 progress: --format progress
+hom: AMBIENTE=hom
+prod: AMBIENTE=prod
