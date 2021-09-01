@@ -40,9 +40,8 @@ Exemplo:
 
 ```sh
 /usr/local/bin
-$ xattr -d com.apple.quarantine chromedriver 
+$ xattr -d com.apple.quarantine chromedrive / geckodriver 
 ```
-
 
 # Execução 
 

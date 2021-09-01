@@ -1,8 +1,13 @@
 ---
 
-default: --profile pretty -p hom
+default: --profile pretty -p hom -p firefox
 
 pretty: --format pretty
 progress: --format progress
 hom: AMBIENTE=hom
 prod: AMBIENTE=prod
+
+chrome: BROWSER=chrome
+firefox: BROWSER=firefox
+safari: BROWSER=safari
+ie: BROWSER=ie
