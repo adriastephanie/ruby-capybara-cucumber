@@ -61,8 +61,45 @@ cucumber -t@nome_tag
 
 
 # Elementos
-{em construção}
 
+## buscar elementos
+
+busca pelo id => find('#teste')
+
+busca pelo id => find_by_id('teste')
+
+busca pelo oprimeiro elemento que contenha o elemento mapeado => find_button(class: 'btn-nome-class')
+
+## buscar elementos combobox, dropbox e autocomplete
+
+buscar por class => find('.btn.dropdown-button').click
+
+busca pelo id => find('#dropdown3').click
+
+busca pelo id passando a opcao/value => select 'Brasilia', from: 'dropdown'
+
+busca pelo id passando a opcao/value:
+
+find('#autocomplete-input').set 'Rio de Jane'
+find('ul', text: 'Rio de Janeiro').click
+
+## buscar elementos radio e checkbox
+
+busca pelo label => find('label[for="carro"]').click
+
+busca pelo id => check('id_screen').click
+
+marcar pela busca do id e o click está na label => check('id_screen', allow_label_click: true)
+
+marcar pela busca do id e o click está na label => uncheck('purple', allow_label_click: true)
+
+marcar radio pela busca do id e o click está na label => choose('label', allow_label_click: true)
+
+## Asserts 
+
+page.assert_text(text, 'Bem vindo!')
+page.has_text?('Bem vindo!')
+have_text('Bem vindo!)
 
 
 # Formatação do cucumber no terminal 
