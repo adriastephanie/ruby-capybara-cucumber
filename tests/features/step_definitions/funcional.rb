@@ -30,8 +30,8 @@ end
 
 Quando('eu adiciono uma transação') do
     click_link 'Criar Movimentação'
-    find('#data_transacao').send_keys('01/09/2021')
-    find('#data_pagamento').send_keys('01/09/2021')
+    find('#data_transacao').send_keys('28/08/2021')
+    find('#data_pagamento').send_keys('28/08/2021')
     find('#descricao').send_keys('Movimentação 1')
     find('#interessado').send_keys('Maria Clara')
     find('#valor').send_keys('120')
