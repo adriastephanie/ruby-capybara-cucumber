@@ -1,6 +1,6 @@
 ---
 
-default: --profile pretty -p hom -p firefox
+default: --profile pretty -p hom -p chrome_headless
 
 pretty: --format pretty
 progress: --format progress
@@ -8,6 +8,8 @@ hom: AMBIENTE=hom
 prod: AMBIENTE=prod
 
 chrome: BROWSER=chrome
+chrome_headless: BROWSER=chrome_headless
 firefox: BROWSER=firefox
+firefox_headless: BROWSER=firefox_headless
 safari: BROWSER=safari
 ie: BROWSER=ie
