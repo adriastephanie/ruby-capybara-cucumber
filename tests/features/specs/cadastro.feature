@@ -1,6 +1,6 @@
 # language: pt
 
-@featCadastro
+
 Funcionalidade: Fazer cadastro.
 
 @cadastroSucesso
@@ -12,5 +12,5 @@ Cenario: Cadastro com sucesso.
 @contaJaCadastrada
 Cenario: Deve criar uma conta já cadastrada.
     Dado que eu estou no site para cadastrar
-    Quando preeencho formulário com email já cadastrador
-    Então o sistema deve mostrar que a conta já foi criada
+    Quando preeencho formulário com email já cadastrado
+    Então o sistema deve mostrar que a conta já existe

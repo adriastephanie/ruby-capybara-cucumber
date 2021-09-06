@@ -9,7 +9,15 @@ class Cadastro < SitePrism::Page
 
     def preencher_formulario
         nome.set 'Maria Clara'
-        email.set 'mariaclara7@teste.com'
+        email.set 'mariaclara11@teste.com'
+        senha.set '123456'
+        btn_criar.click
+        
+    end
+
+    def preencher_formulario_conta_existente
+        nome.set 'Maria Clara'
+        email.set 'mariaclara5@teste.com'
         senha.set '123456'
         btn_criar.click
         
